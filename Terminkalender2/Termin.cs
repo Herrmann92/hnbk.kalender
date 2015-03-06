@@ -44,7 +44,7 @@ namespace Terminkalender2
 
 		override
 		public String ToString() {
-			return "(" + id + ")" + date + " " + ort + " mit " + person + " :: " + desc;
+			return "(" + id + ")" + date + " " + ort + " mit " + person + " - " + desc;
 		}
 
 		public bool contains(String match) {

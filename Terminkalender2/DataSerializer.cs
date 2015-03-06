@@ -13,12 +13,13 @@ namespace Terminkalender2
 		}
 
 		public static Data deserialize(String path) {
-			Data d = null;
+			Data d = new Data();
 
 			IFormatter formatter = new BinaryFormatter ();
 
-			Stream stream = new FileStream (path, FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
 			try {
+                
 				d = formatter.Deserialize(stream) as Data;
 			} catch(Exception e) {
 				Console.WriteLine ("Error while deserializing data in file " + path);

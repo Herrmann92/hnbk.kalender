@@ -1,13 +1,17 @@
 ﻿using System;
+using System.IO;
+
 
 namespace Terminkalender2
 {
 	class MainClass
 	{
-		private static String datapath = "/Users/oliverherrmann/Desktop/terminkalender.data";
+        private static String datapath = "h:/terminkalender.data";//"/Users/oliverherrmann/Desktop/terminkalender.data";
 		public static Data data = new Data();
 
 		public static int Main (string[] args) {
+            if(!File.Exists(datapath))
+                File.Create(datapath);
 			mainLoop ();
 			return 0;
 		}

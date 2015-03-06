@@ -1,0 +1,5 @@
+H:\c#\hnbk.kalender\Terminkalender2\obj\x86\Debug\Terminkalender2.exe
+H:\c#\hnbk.kalender\Terminkalender2\bin\Debug\Terminkalender2.exe
+H:\c#\hnbk.kalender\Terminkalender2\bin\Debug\Terminkalender2.pdb
+H:\c#\hnbk.kalender\Terminkalender2\obj\x86\Debug\Terminkalender2.csprojResolveAssemblyReference.cache
+H:\c#\hnbk.kalender\Terminkalender2\obj\x86\Debug\Terminkalender2.pdb
