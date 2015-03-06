@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminkalender2", "Terminkalender2\Terminkalender2.csproj", "{3FC169DA-0676-4D9A-BD4C-E05C1B106202}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FC169DA-0676-4D9A-BD4C-E05C1B106202}.Debug|x86.ActiveCfg = Debug|x86
+		{3FC169DA-0676-4D9A-BD4C-E05C1B106202}.Debug|x86.Build.0 = Debug|x86
+		{3FC169DA-0676-4D9A-BD4C-E05C1B106202}.Release|x86.ActiveCfg = Release|x86
+		{3FC169DA-0676-4D9A-BD4C-E05C1B106202}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Terminkalender2\Terminkalender2.csproj
+	EndGlobalSection
+EndGlobal
