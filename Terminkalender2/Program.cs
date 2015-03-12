@@ -6,7 +6,7 @@ namespace Terminkalender2
 {
 	class MainClass
 	{
-        private static String datapath = "h:/terminkalender.data";//"/Users/oliverherrmann/Desktop/terminkalender.data";
+		private static String datapath = "/Users/oliverherrmann/Desktop/terminkalender.data"; //"h:/terminkalender.data";
 		public static Data data = new Data();
 
 		public static int Main (string[] args) {
