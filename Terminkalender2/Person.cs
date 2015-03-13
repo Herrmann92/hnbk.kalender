@@ -2,8 +2,10 @@
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Personenklasse
+	/// </summary>
 	[Serializable]
-
 	public class Person
 	{
 		public int id;
@@ -23,6 +25,10 @@ namespace Terminkalender2
 			this.strasse = strasse;
 		}
 
+		/// <summary>
+		/// Statische Factory-Methode
+		/// </summary>
+		/// <param name="id">Identifier.</param>
 		public static Person create(int id) {
 			string nn, vn, st, str;
 			int plz;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Termin-Loop, zum anlegen, löschen, etc von Terminen
+	/// </summary>
 	public class TerminLoop : AbsctractLoop
 	{
 		public TerminLoop (params Object[] data) : base ("Termin", data)

@@ -4,31 +4,48 @@ using System.IO;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Haupklasse mit statischer Main-Methode
+	/// </summary>
 	class MainClass
 	{
-		private static String datapath = "/Users/oliverherrmann/Desktop/terminkalender.data"; //"h:/terminkalender.data";
+		/*
+		 * statische Variablen zur ausführung: -Speicher-pfad und Daten-Objet 
+		 */
+		private static String datapath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/terminkalender.data";
 		public static Data data = new Data();
 
 		public static int Main (string[] args) {
-            if(!File.Exists(datapath))
-                File.Create(datapath);
+
 			mainLoop ();
 			return 0;
 		}
 
+		/// <summary>
+		/// Haupt Eingabe-Loop
+		/// </summary>
 		private static void mainLoop() {
+
+			//Daten einmalig vor start der eigentlichen Anwedung laden und deserialisieren
 			load ();
 			new MainLoop (data, datapath).execute ();
 		}
 
+		//Daten laden und deserialisieren
 		public static void load() {
 			data = DataSerializer.deserialize (datapath);
 		}
 
+		//Daten serialisieren und speichern
 		public static void save() {
 			DataSerializer.serialize (datapath, data);
 		}
 
+		/// <summary>
+		/// Reads a date and nothing but a date!
+		/// </summary>
+		/// <returns>The date.</returns>
+		/// <param name="str">String.</param>
 		public static DateTime readDate(String str) {
 			DateTime dt;
 			Console.WriteLine (str);
@@ -41,6 +58,11 @@ namespace Terminkalender2
 			return dt;
 		}
 
+		/// <summary>
+		/// Reads an Int and nothing but an Int!
+		/// </summary>
+		/// <returns>The int.</returns>
+		/// <param name="str">String.</param>
 		public static int readInt(String str) {
 			int i;
 			Console.WriteLine (str);
@@ -52,105 +74,6 @@ namespace Terminkalender2
 
 			return i;
 		}
-
-
-
-		/*
-		private static int mainLoop () {
-			String input;
-			String opt = "Optionen: termin, person, save, load, q";
-
-			while (true) {
-				Console.WriteLine (opt);
-				input = Console.ReadLine ();
-
-				switch (input) {
-				case "termin":
-					Console.Clear ();
-					//terminLoop (null);
-					new TerminLoop (data).execute ();
-					Console.Clear ();
-					break;
-				case "person":
-					Console.Clear ();
-					personLoop (null);
-					Console.Clear ();
-					break;			
-				case "save":
-					DataSerializer.serialize (datapath, data);
-					Console.Clear ();
-					break;
-				case "load":
-					data = DataSerializer.deserialize (datapath);
-					Console.Clear ();
-					break;
-				case "q":
-					return 0;
-				}
-			}
-		}
-
-		private static int terminLoop(string arg) {
-			String input;
-			String opt = "Termin: add, list, seek, q";
-
-			while (true) {
-				Console.WriteLine (opt);
-				input = Console.ReadLine ();
-
-				switch (input) {
-				case "add":
-					Console.Clear ();
-					data.terminList.Add (Termin.create (data.generateTerminID ()));
-					Console.Clear ();
-					break;
-				case "list":
-					Console.Clear ();
-					data.terminList.ForEach (Console.Out.WriteLine);
-					break;
-				case "seek":
-					Console.Clear ();
-					Console.WriteLine ("Filter eingeben:");
-					String filter = Console.ReadLine ();
-					data.terminList.FindAll (p => p.contains (filter)).ForEach (Console.Out.WriteLine);
-					break;				
-				case "q":
-					return 0;
-					break;
-				}
-			}
-		}
-
-		private static int personLoop (string arg)
-		{
-			String input;
-			String opt = "Person: add, list, seek, q";
-
-			while (true) {
-				Console.WriteLine (opt);
-				input = Console.ReadLine ();
-
-				switch (input) {
-				case "add":
-					Console.Clear ();
-					data.personList.Add (Person.create (data.generatePersonID()));
-					Console.Clear ();
-					break;
-				case "list":
-					Console.Clear ();
-					data.personList.ForEach (Console.Out.WriteLine);
-					break;
-				case "seek":
-					Console.Clear ();
-					Console.WriteLine ("Filter eingeben:");
-					String filter = Console.ReadLine ();
-					data.personList.FindAll (p => p.contains (filter)).ForEach (Console.Out.WriteLine);
-					break;				
-				case "q":
-					return 0;
-				}
-			}
-		}
-		*/
+			
 	}
 }

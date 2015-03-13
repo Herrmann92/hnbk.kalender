@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Data-Klasse, die Personen und Termine kapselt, um sie gemeinsam zu (de)serialisiren und zu speichern
+	/// </summary>
 	[Serializable]
 	public class Data
 	{

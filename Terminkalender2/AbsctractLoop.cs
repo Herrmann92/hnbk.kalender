@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Abstrakte Basisklasse für einen Command-Line Loop
+	/// </summary>
 	abstract public class AbsctractLoop
 	{
 		protected Object[] data;
@@ -15,7 +18,9 @@ namespace Terminkalender2
 		}
 
 
-
+		/// <summary>
+		/// Loop ausführen
+		/// </summary>
 		public void execute() {
 			String input;
 			while (true) {
@@ -31,6 +36,9 @@ namespace Terminkalender2
 			}
 		}
 
+		/// <summary>
+		/// Dictionary mit Zuordnung zwischen Optionsnamen und Funktionen
+		/// </summary>
 		protected abstract Dictionary<String, Func<String,bool>> map();
 
 		private String options() {

@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Terminkalender2/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Terminkalender2/Termin.cs">
     <Files>
-      <File FileName="Terminkalender2/Program.cs" Line="4" Column="2" />
-      <File FileName="Terminkalender2/Person.cs" Line="1" Column="1" />
-      <File FileName="Terminkalender2/PersonList.cs" Line="1" Column="1" />
+      <File FileName="Terminkalender2/DataSerializer.cs" Line="34" Column="3" />
+      <File FileName="Terminkalender2/TerminLoop.cs" Line="24" Column="26" />
+      <File FileName="Terminkalender2/Termin.cs" Line="39" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

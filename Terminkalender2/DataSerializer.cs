@@ -6,6 +6,9 @@ using System.IO;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Serializer zum Serialisieren vom globalen Data-Objekt
+	/// </summary>
 	public class DataSerializer
 	{
 		public DataSerializer ()

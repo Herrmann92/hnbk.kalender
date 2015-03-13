@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Terminklasse
+	/// </summary>
 	[Serializable]
 	public class Termin
 	{
@@ -44,7 +47,7 @@ namespace Terminkalender2
 
 		override
 		public String ToString() {
-			return "(" + id + ")" + date + " " + ort + " mit " + person + " - " + desc;
+			return "(" + id + ")" + date + " " + ort + " mit " + person.ToString() + " - " + desc;
 		}
 
 		public bool contains(String match) {

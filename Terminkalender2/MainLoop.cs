@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Der Main-Loop, um zwischen Termin- und Personen-Modus zu wechseln
+	/// </summary>
 	public class MainLoop : AbsctractLoop
 	{
 		public MainLoop (params Object[] data) : base ("Main", data)

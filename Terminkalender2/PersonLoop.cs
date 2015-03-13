@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Personen-Loop, um Personen aufzulisten, anzuzeigen, etc.
+	/// </summary>
 	public class PersonLoop : AbsctractLoop
 	{
 		public PersonLoop (params Object[] data) : base ("Person", data)

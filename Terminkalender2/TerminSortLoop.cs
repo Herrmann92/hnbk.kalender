@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Terminkalender2
 {
+	/// <summary>
+	/// Loop, um die Sortierung von Terminen zu organisieren
+	/// </summary>
 	public class TerminSortLoop : AbsctractLoop
 	{
 		public TerminSortLoop (params Object[] data) : base("Sorteiren", data)
